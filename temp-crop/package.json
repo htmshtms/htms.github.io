@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@jimp/wasm-webp": "^1.6.1",
+    "jimp": "^1.6.1"
+  }
+}

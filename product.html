@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTMS | Product — HTMS No.1 Signature Eau de Parfum</title>
+  <meta name="description"
+    content="HTMS No.1 — A signature fragrance for the distinct individual. Cold. Deliberate. Unmistakable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-text">HTMS</span>
+      <span class="logo-mark">®</span>
+    </div>
+    <nav class="nav">
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="product.html" class="nav-link">PRODUCT</a>
+      <a href="index.html#mission" class="nav-link">MISSION</a>
+      <a href="index.html#values" class="nav-link">VALUES</a>
+      <a href="index.html#process" class="nav-link">PROCESS</a>
+      <button class="btn btn-secondary" onclick="window.location.href='product.html'">SHOP NOW</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+      <div class="product-hero-inner">
+        <div class="product-hero-text fade-up">
+          <span class="label text-light">HTMS COLLECTION</span>
+          <h1 class="product-hero-title">PRODUCT</h1>
+          <p class="product-hero-subtitle">Precision-distilled identity.<br />Worn on the skin.</p>
+        </div>
+        <div class="product-hero-image fade-up delay-1">
+          <img src="assets/perfume_bottle.png" alt="HTMS No.1 Signature Bottle" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="product-detail-container fade-up">
+        <!-- Left: Product Identity -->
+        <div class="product-detail-left">
+          <span class="label text-light">PRODUCT NO.1</span>
+          <h2 class="product-name">HTMS<br />Fragrance</h2>
+          <div class="product-divider"></div>
+          <p class="product-description">
+            A high-concentration essence extracted from the intersection of metallic cold and deliberate warmth.
+            This is not a scent for everyone. It is a scent for one — you.
+          </p>
+          <div class="product-meta">
+            <div class="product-meta-item">
+              <span class="product-meta-label">VOLUME</span>
+              <span class="product-meta-value">50 ML</span>
+            </div>
+            <div class="product-meta-item">
+              <span class="product-meta-label">TYPE</span>
+              <span class="product-meta-value">EAU DE PARFUM</span>
+            </div>
+            <div class="product-meta-item">
+              <span class="product-meta-label">CONCENTRATION</span>
+              <span class="product-meta-value">22%</span>
+            </div>
+          </div>
+          <div class="product-price-row">
+            <span class="product-price">₩ 89,000</span>
+            <button class="btn btn-primary product-cta-btn" id="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Right: Product Image Detail -->
+        <div class="product-detail-right">
+          <div class="product-detail-image-wrap">
+            <div class="product-badge">LIMITED</div>
+            <img src="assets/perfume_bottle.png" alt="HTMS No.1 Fragrance" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fragrance Notes Section -->
+    <section class="fragrance-notes">
+      <div class="fragrance-notes-header fade-up">
+        <span class="label text-light">COMPOSITION</span>
+        <div class="fragrance-notes-title-row">
+          <h2 class="fragrance-notes-title">FRAGRANCE PROFILE</h2>
+          <span class="fragrance-notes-count">3 LAYERS</span>
+        </div>
+        <div class="product-divider"></div>
+      </div>
+
+      <div class="fragrance-notes-grid fade-up">
+        <!-- First / Top Notes -->
+        <div class="note-card" id="note-first">
+          <div class="note-header">
+            <span class="note-number">01</span>
+            <div class="note-label-wrap">
+              <span class="note-type">FIRST</span>
+              <span class="note-layer">TOP NOTES</span>
+            </div>
+          </div>
+          <ul class="note-list">
+            <li>Black Pepper</li>
+            <li>Bergamot</li>
+            <li>Frozen Aldehydes</li>
+          </ul>
+          <p class="note-desc">
+            The initial cold impression — sharp and immediate, cutting through
+            the air with metallic clarity.
+          </p>
+        </div>
+
+        <!-- Heart / Middle Notes -->
+        <div class="note-card note-card-center" id="note-heart">
+          <div class="note-card-inner-img">
+            <img src="assets/perfume_bottle.png" alt="HTMS Bottle" />
+          </div>
+          <div class="note-header">
+            <span class="note-number">02</span>
+            <div class="note-label-wrap">
+              <span class="note-type">HEART</span>
+              <span class="note-layer">MIDDLE NOTES</span>
+            </div>
+          </div>
+          <ul class="note-list">
+            <li>Iris Root</li>
+            <li>Smoky Vetiver</li>
+            <li>Dark Leather</li>
+          </ul>
+          <p class="note-desc">
+            The core identity — a deliberate tension between organic warmth
+            and constructed precision.
+          </p>
+        </div>
+
+        <!-- Base Notes -->
+        <div class="note-card" id="note-base">
+          <div class="note-header">
+            <span class="note-number">03</span>
+            <div class="note-label-wrap">
+              <span class="note-type">BASE</span>
+              <span class="note-layer">BASE NOTES</span>
+            </div>
+          </div>
+          <ul class="note-list">
+            <li>Ambergris</li>
+            <li>Cedarwood</li>
+            <li>White Musk</li>
+          </ul>
+          <p class="note-desc">
+            The permanent residue — what remains when the world has moved on.
+            Quiet, certain, and unmistakably yours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spray Feature Section -->
+    <section class="product-feature">
+      <div class="product-feature-inner">
+        <div class="product-feature-image fade-up">
+          <img src="assets/product_spray_large.png" alt="HTMS Fragrance Spray" />
+          <div class="product-feature-overlay">
+            <span class="feature-tag">ATOMIZER PRECISION</span>
+          </div>
+        </div>
+        <div class="product-feature-content fade-up delay-1">
+          <span class="label text-light">ENGINEERING</span>
+          <h2 class="product-feature-title">FIND YOUR<br />TEMPERATURE</h2>
+          <p class="product-feature-text">
+            Each atomizer is calibrated to 0.12ml per press — delivering the exact concentration
+            needed to claim presence without excess. Precision is not optional. It is the product.
+          </p>
+          <div class="product-feature-specs">
+            <div class="spec-item">
+              <span class="spec-value">0.12ml</span>
+              <span class="spec-label">PER PRESS</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-value">417+</span>
+              <span class="spec-label">APPLICATIONS</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-value">6–8H</span>
+              <span class="spec-label">LONGEVITY</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="feature-shop-btn">EXPLORE THE COLLECTION</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="product-cta">
+      <div class="product-cta-inner fade-up">
+        <span class="label text-light">BEGIN HERE</span>
+        <h2 class="product-cta-title">CODURE<br />YOUR<br />TEMPERATURE</h2>
+        <button class="btn btn-dark" id="product-begin-btn">SHOP NOW</button>
+        <p class="product-cta-sub">Free delivery on orders over ₩ 100,000</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="footer-logo-icon"></div>
+      <span class="copyright">HTMS © 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-link">INSTAGRAM</a>
+      <a href="#" class="footer-link">TWITTER</a>
+      <a href="#" class="footer-link">TERMS</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

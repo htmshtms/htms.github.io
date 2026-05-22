@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const target = document.querySelector(targetId);
       if (target) {
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
