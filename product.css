@@ -51,10 +51,10 @@
 .prod-problem {
   background-color: #fff;
   width: 100%;
-  padding: 11.7188vw 0 15.6250vw;
+  padding: 11.7188vw 0 20vw; /* Increased bottom padding */
   position: relative;
   overflow: hidden;
-  min-height: 84.4531vw;
+  min-height: 94.4531vw; /* Increased min-height */
 }
 
 .prod-label {
@@ -120,8 +120,8 @@
 
 .prod-prob-img1 {
   position: absolute;
-  right: calc(50% - 43.9063vw); /* 6.0156vw from 1280 box edge */
-  top: 44.7656vw;
+  right: calc(50% - 43.9063vw);
+  top: 50vw; /* Increased from 44.7656vw */
   width: 50.5469vw;
   height: 28.8281vw;
 }
@@ -133,8 +133,8 @@
 
 .prod-prob-img2 {
   position: absolute;
-  left: calc(50% - 43.9063vw); /* 6.0938vw from 1280 box edge */
-  top: 56.0156vw;
+  left: calc(50% - 43.9063vw);
+  top: 61.5vw; /* Increased from 56.0156vw */
   width: 13.0469vw;
 }
 
