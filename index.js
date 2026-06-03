@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       this.ctx = this.canvas.getContext('2d');
       this.points = [];
-      
+
       this.resize();
       window.addEventListener('resize', () => this.resize());
 
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll('.problem-text').forEach(el => {
-    new Typewriter(el, 5, 2000);
+    new Typewriter(el, 10, 2000);
   });
 
 
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const ripple = document.createElement('span');
       ripple.classList.add('ripple');
-      
+
       const size = Math.max(rect.width, rect.height) * 2;
       ripple.style.width = `${size}px`;
       ripple.style.height = `${size}px`;
@@ -413,16 +413,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Draw expanding ring
         const currentRadius = drop.age * this.params.freq * 10;
-        
+
         // Decay amplitude over life
         const alpha = Math.max(0, 1 - (drop.age / this.params.life));
-        
+
         this.ctx.beginPath();
         this.ctx.arc(drop.x, drop.y, currentRadius, 0, Math.PI * 2);
-        
+
         // Thickness expands slightly
         this.ctx.lineWidth = 1 + currentRadius * 0.02;
-        
+
         // Color with amplitude and alpha
         this.ctx.strokeStyle = `rgba(255, 68, 114, ${this.params.amp * alpha})`; // #ff4472
         this.ctx.stroke();
@@ -444,6 +444,12 @@ document.addEventListener("DOMContentLoaded", () => {
     new RippleWake(teamHeader, teamHeroBg);
   }
 
+  const prodHeader = document.querySelector('.prod-hero');
+  const prodHeroBg = document.querySelector('.prod-hero-bg');
+  if (prodHeader && prodHeroBg) {
+    new RippleWake(prodHeader, prodHeroBg);
+  }
+
   // Apple Style Scroll Interaction for Problem Section
   const appleScrollSection = document.querySelector('.apple-scroll-section');
   const appleScrollContent = document.querySelector('.apple-scroll-content');
@@ -452,14 +458,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
       const rect = appleScrollSection.getBoundingClientRect();
       const scrollEnd = rect.height - window.innerHeight;
-      
+
       let progress = -rect.top / scrollEnd;
       if (progress < 0) progress = 0;
       if (progress > 1) progress = 1;
-      
+
       let opacity = 0;
       let scale = 0.95;
-      
+
       if (progress < 0.3) {
         const p = progress / 0.3;
         const ease = 1 - Math.pow(1 - p, 3);
@@ -474,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity = 1 - ease;
         scale = 1 + (0.05 * ease);
       }
-      
+
       appleScrollContent.style.opacity = opacity;
       appleScrollContent.style.transform = `scale(${scale})`;
     });

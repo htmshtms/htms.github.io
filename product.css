@@ -23,6 +23,7 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  filter: brightness(0.5);
 }
 
 .prod-hero-content {
