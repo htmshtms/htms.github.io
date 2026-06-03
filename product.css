@@ -340,12 +340,30 @@
 .scen-card {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .scen-img-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1.1;
   background-color: #e2e2e2;
   margin-bottom: 1.5vw;
+  transition: transform 0.4s ease;
+}
+.scen-card:hover .scen-img-placeholder {
+  transform: scale(0.98);
+}
+.scen-card:nth-child(1) .scen-img-placeholder { aspect-ratio: 1 / 1.1; }
+.scen-card:nth-child(2) .scen-img-placeholder { aspect-ratio: 1 / 1.4; }
+.scen-card:nth-child(3) .scen-img-placeholder { aspect-ratio: 1 / 0.85; }
+.scen-card:nth-child(4) .scen-img-placeholder { aspect-ratio: 1 / 1.25; }
+
+.scen-card-text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.scen-card:hover .scen-card-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 .scen-card-title {
   font-family: var(--font-syne);
@@ -373,6 +391,10 @@
   .scen-main-title {
     font-size: 22px;
     margin-bottom: 8vw;
+  }
+  .scen-card-text {
+    opacity: 1;
+    transform: none;
   }
   .scen-card-title {
     font-size: 14px;
