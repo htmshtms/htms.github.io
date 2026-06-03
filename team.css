@@ -201,7 +201,7 @@
 
 .team-member {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   gap: clamp(40px, 8vw, 120px);
   justify-content: flex-end;
@@ -215,9 +215,6 @@
 .member-media {
   flex: 1;
   max-width: 267px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   position: relative;
   z-index: 5;
 }
@@ -277,7 +274,9 @@
   font-size: 16px;
   color: #282828;
   text-transform: uppercase;
-  margin-top: 0;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
 }
 
 .member-name {
@@ -362,7 +361,13 @@
   .team-member, .team-member.minseok {
     flex-direction: column;
     text-align: center;
+    align-items: center;
     gap: 30px;
+  }
+
+  .member-no {
+    position: static;
+    margin-top: 16px;
   }
   
   .member-bg-text, .member-bg-text.right {
