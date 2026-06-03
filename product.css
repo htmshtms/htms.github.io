@@ -388,7 +388,7 @@
 }
 .scen-track {
   display: flex;
-  gap: 2vw;
+  gap: 0.5vw;
   width: max-content;
   animation: marquee 20s linear infinite;
 }
@@ -397,7 +397,7 @@
 }
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 1vw)); }
+  100% { transform: translateX(calc(-50% - 0.25vw)); }
 }
 
 .scen-card {
@@ -458,10 +458,10 @@
 @media (max-width: 768px) {
   .scen-header { padding: 0 4vw; }
   .scen-main-title { font-size: 24px; margin-bottom: 8vw; }
-  .scen-track { gap: 4vw; animation-duration: 30s; }
+  .scen-track { gap: 1vw; animation-duration: 30s; }
   @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 2vw)); }
+    100% { transform: translateX(calc(-50% - 0.5vw)); }
   }
   .scen-card { width: 75vw; }
   .scen-card:nth-child(1), .scen-card:nth-child(5) { height: 90vw; }
