@@ -33,7 +33,7 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
-  padding: 25vw 5.4688vw 0;
+  padding: 30vw 5.4688vw 0;
 }
 
 .prod-hero-title {
@@ -355,7 +355,7 @@
   /* Hero */
   .prod-hero { height: auto; min-height: 600px; padding-bottom: 90px; }
   .prod-hero-content {
-    padding: 180px 5vw 0;
+    padding: 240px 5vw 0;
   }
 
   /* Problem */
