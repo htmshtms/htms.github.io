@@ -85,26 +85,34 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 87.8125vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4vw;
 }
 
-.prod-desc {
-  position: absolute;
-  top: 6.0938vw;
-  left: 0;
-  width: 28.1250vw;
+.prod-prob-col.left {
+  flex: 1.1;
+}
+
+.prod-prob-col.middle {
+  flex: 1.4;
   font-size: 1.2500vw;
   line-height: 1.5;
   color: #000;
+  padding-top: 2.3438vw;
 }
 
-.prod-desc-right {
-  position: absolute;
-  top: 1.4063vw;
-  right: 0;
-  width: 28.5156vw;
+.prod-prob-col.right {
+  flex: 1.4;
   font-size: 1.2500vw;
   line-height: 1.5;
   color: #000;
+  padding-top: 2.3438vw;
+}
+
+.indent {
+  margin-left: 5vw;
 }
 
 .mt-xl { margin-top: 4.6875vw; }
