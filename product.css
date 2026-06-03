@@ -339,8 +339,8 @@
 }
 .detail-img { position: absolute; object-fit: cover; }
 .detail-img.m1 { top: 11.5625vw; left: 0; width: 100%; height: 71.4063vw; z-index: 1; }
-.detail-img.m2 { top: 83.6719vw; left: 0; width: 64%; height: 54.9219vw; z-index: 2; }
-.detail-img.m3 { top: 83.6719vw; right: 0; width: 36%; height: 54.9219vw; z-index: 2; }
+.detail-img.m2 { top: 83.6719vw; left: 0; width: calc(64% - 0.3515vw); height: 54.9219vw; z-index: 2; }
+.detail-img.m3 { top: 83.6719vw; right: 0; width: calc(36% - 0.3515vw); height: 54.9219vw; z-index: 2; }
 .detail-img.m4 { top: 139.2969vw; left: 0; width: 100%; height: 70.4688vw; z-index: 3; }
 
 .detail-footer-text {
