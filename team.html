@@ -1,140 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTMS | Team</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMS - Team</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="team.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <span class="logo-text">HTMS</span>
-      <span class="logo-mark">®</span>
-    </div>
+  <div class="main-container">
+
+    <!-- Navigation -->
     <nav class="nav">
-      <a href="team.html" class="nav-link">TEAM</a>
-      <a href="product.html" class="nav-link">PRODUCT</a>
-      <a href="index.html#mission" class="nav-link">MISSION</a>
-      <a href="index.html#values" class="nav-link">VALUES</a>
-      <a href="index.html#process" class="nav-link">PROCESS</a>
-      <button class="btn btn-secondary" onclick="window.location.href='product.html'">SHOP NOW</button>
+      <a href="index.html" class="nav-logo">HTMS</a>
+      <div class="nav-links">
+        <a href="team.html">TEAM</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="index.html#mission">MISSION</a>
+        <a href="index.html#values">VALUES</a>
+        <a href="index.html#process">PROCESS</a>
+      </div>
     </nav>
-  </header>
 
-  <main>
-    <!-- Team Hero Section -->
-    <section class="team-hero">
-      <div class="team-hero-container fade-up">
-        <h1 class="team-hero-title">
-          HTMS<br/>team
-        </h1>
-        <h2 class="team-hero-subtitle">
-          Minseok Choi <span class="highlight-red">&</span> Taehyun Hwang
-        </h2>
-        <p class="team-hero-text">
-          "Cold but maintaining its own temperature, we<br/>
-          create a mood for those who seek it."
-        </p>
+    <!-- Team Header Section -->
+    <header class="team-hero">
+      <div class="team-hero-bg">
+        <img src="assets/team-bg.png" alt="Team Background" class="team-bg-img">
+        <div class="team-hero-gradient"></div>
+      </div>
+      <div class="team-hero-content">
+        <h1 class="team-hero-title slide-up">WHO <span class="text-grey">WE</span> ARE?</h1>
+        <div class="team-hero-text slide-up delay-1">
+          <p>Cold but maintaining its own temperature, we create a mood for those who seek it.</p>
+        </div>
+        <div class="team-hero-text-right slide-up delay-2">
+          <p>We build scent for people who keep their own temperature in a cold world.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Team Identification -->
+    <section class="team-id-section">
+      <div class="team-id-content">
+        <span class="team-label slide-up">IDENTIFICATION</span>
+        <h2 class="team-title slide-up delay-1">TEAM HTMS</h2>
+        <div class="team-id-desc slide-up delay-2">
+          <p class="team-id-desc-bold">WE PRIORITIZE COLDNESS, CONTRAST, AND <br>CHARACTER TO CREATE A DISTINCT METALLIC
+            MOOD.</p>
+          <p>Minseok brings structural precision to every <br>formulation, reading identity the way an architect<br>
+            reads space. Taehyun synthesizes concept into<br> lived experience, translating the invisible into
+            <br>something you can wear.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Team's HTMS Section -->
-    <section class="team-htms">
-      <div class="team-htms-container fade-up">
-        <div class="team-htms-label">
-          <span>IDENTIFICATION</span>
-        </div>
-        <div class="team-htms-content">
-          <h2 class="team-htms-title">TEAM'S HTMS</h2>
-          <p class="team-htms-text">
-            Minseok brings structural precision to every formulation, reading identity the way an architect reads space. Taehyun synthesizes concept into lived experience, translating the invisible into something you can wear.
-          </p>
-        </div>
+    <!-- Team Introduction -->
+    <section class="team-intro-section">
+      <div class="team-intro-header slide-up">
+        <span class="team-label text-dark">PROCESS</span>
+        <h2 class="team-intro-title">TEAM<br>INTRODUCTION</h2>
+        <p class="team-intro-subtitle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We create for those who choose their own path, maintain their own temperature,
+          and seek a presence that cannot be replicated.</p>
       </div>
-    </section>
 
-    <!-- Team Introduction Section -->
-    <section class="team-intro">
-      <div class="team-intro-container">
-        <!-- Sidebar Label -->
-        <div class="team-intro-sidebar fade-up">
-          <span class="label text-light">PROCESS</span>
-          <h2 class="team-intro-title">Team<br/>introduction</h2>
-        </div>
-
-        <!-- Members -->
-        <div class="team-intro-members">
-          <!-- Member 1 -->
-          <div class="member-card fade-up">
-            <div class="member-info">
-              <span class="member-number">01</span>
-              <h3 class="member-name">MINSEOK<br/>CHOI</h3>
-              <p class="member-text">
-                We sample your raw data, analyzing<br/>
-                preferences and latent potential.
-              </p>
+      <div class="team-members">
+        <div class="team-member taehyun slide-up">
+          <div class="member-media">
+            <div class="member-image-wrapper">
+              <img src="assets/team-profile.png" alt="Taehyun Hwang" class="member-image">
             </div>
-            <div class="member-image">
-              <div class="member-overlay">IMG_DAT.01 // RAW_SMPL</div>
-              <img src="assets/member1_choi.png" alt="Minseok Choi Photo" />
-            </div>
+            <span class="member-no">/ no. 01</span>
           </div>
+          <div class="member-info">
+            <div class="member-bg-text">HT</div>
+            <div class="member-dot"></div>
+            <h3 class="member-name">TAEHYUN<br>HWANG</h3>
+            <p class="member-role">Creative Director / Brand Strategist</p>
+            <p class="member-desc">Leads the overall creative direction of HTMS, shaping the brand's mood, concept, and
+              emotional narrative into a clear identity.</p>
+          </div>
+        </div>
 
-          <!-- Member 2 -->
-          <div class="member-card member-card-reverse fade-up">
-            <div class="member-image">
-              <div class="member-overlay">IMG_DAT.02 // PRFY_STRC</div>
-              <img src="assets/member2_hwang.png" alt="Taehyun Hwang Photo" />
+        <div class="team-member minseok slide-up delay-1">
+          <div class="member-media">
+            <div class="member-image-wrapper">
+              <img src="assets/team-profile.png" alt="Minseok Choi" class="member-image flip-horizontal">
             </div>
-            <div class="member-info">
-              <span class="member-number">02</span>
-              <h3 class="member-name">TAEHYUN<br/>HWANG</h3>
-              <p class="member-text">
-                Purifying the aesthetic. Removing<br/>
-                unnecessary elements until only the<br/>
-                essential structure remains.
-              </p>
-            </div>
+            <span class="member-no">/ no. 02</span>
+          </div>
+          <div class="member-info left-align">
+            <div class="member-bg-text right">MS</div>
+            <div class="member-dot"></div>
+            <h3 class="member-name">MINSEOK<br>CHOI</h3>
+            <p class="member-role">Art Director / Visual Designer</p>
+            <p class="member-desc">Shapes the visual language of HTMS through form, typography, and digital experiences.
+              Driven by a passion for creating cold yet expressive aesthetics that leave a lasting impression.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Finding Unique Scent Section -->
-    <section class="problem problem-dark">
-      <div class="container fade-up">
-        <h2 class="section-title text-white">
-          Finding the Unique Scent<br/>
-          for Each Person
-        </h2>
-        <div class="divider"></div>
-        <p class="problem-text">
-          In a world full of mass-produced fragrance,<br/>
-          finding a scent that truly reflects your inner self is rarer than ever. Trends blur into sameness,<br/>
-          leaving a void where your personal signature should be. We cut through the noise with clinical precision.
-        </p>
-      </div>
+    <!-- Team Problem Section -->
+    <section class="team-problem-section">
+      <h2 class="team-problem-title slide-up">FINDING THE UNIQUE<br>SCENT FOR EACH PERSON</h2>
+      <div class="team-problem-divider slide-up delay-1"></div>
+      <p class="team-problem-text slide-up delay-2">
+        In a world full of mass-produced fragrance, finding a scent that truly reflects your inner self is rarer than
+        ever. Trends blur into sameness, leaving a void where your personal signature should be. We cut through the
+        noise with clinical precision.
+      </p>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-left">
-      <div class="footer-logo-icon"></div>
-      <span class="copyright">HTMS © 2026</span>
-    </div>
-    <div class="footer-links">
-      <a href="#" class="footer-link">INSTAGRAM</a>
-      <a href="#" class="footer-link">TWITTER</a>
-      <a href="#" class="footer-link">TERMS</a>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <span class="footer-logo"></span>
+        <span class="copyright">HTMS © 2026</span>
+      </div>
+      <div class="footer-right">
+        <a href="#">INSTAGRAM</a>
+        <a href="#">TWITTER</a>
+        <a href="#">TERMS</a>
+      </div>
+    </footer>
+  </div>
 
-  <script src="main.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>
