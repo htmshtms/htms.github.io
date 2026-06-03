@@ -428,7 +428,7 @@
   bottom: 0; left: 0; width: 100%;
   padding: 6vw 2vw 2vw;
   box-sizing: border-box;
-  background: linear-gradient(to top, rgba(255,255,255,1) 40%, rgba(255,255,255,0));
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0));
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -442,7 +442,7 @@
   font-family: var(--font-syne);
   font-weight: 700;
   font-size: 1vw;
-  color: #000;
+  color: #fff;
   margin-bottom: 0.5vw;
   text-transform: uppercase;
 }
@@ -451,7 +451,7 @@
   font-weight: 400;
   font-size: 0.85vw;
   line-height: 1.5;
-  color: #222;
+  color: #eee;
 }
 
 @media (max-width: 768px) {
