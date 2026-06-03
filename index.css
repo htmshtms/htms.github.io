@@ -992,3 +992,16 @@ a {
     justify-content: center;
   }
 }
+
+/* Wavy Text CSS */
+.wavy-char {
+  display: inline-block;
+  will-change: transform;
+}
+.is-wavy .wavy-char {
+  animation: wavyText var(--wavy-dur, 2s) ease-in-out infinite;
+}
+@keyframes wavyText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(calc(var(--wavy-amp, 0.3em) * -1)); }
+}

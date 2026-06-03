@@ -485,4 +485,66 @@ document.addEventListener("DOMContentLoaded", () => {
       appleScrollContent.style.transform = `scale(${scale})`;
     });
   }
+
+  /*
+    Wavy Text Effect
+    Recursively wraps each character of a text node into individual spans. 
+    Applies a staggered CSS keyframe animation that translates the character on the Y-axis.
+  */
+  class WavyText {
+    constructor(element, options = {}) {
+      this.element = element;
+      this.amplitude = options.amplitude !== undefined ? options.amplitude : 0.3;
+      this.duration = options.duration !== undefined ? options.duration : 2;
+      this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (this.prefersReducedMotion) return;
+
+      this.element.style.setProperty('--wavy-amp', `${this.amplitude}em`);
+      this.element.style.setProperty('--wavy-dur', `${this.duration}s`);
+      
+      let charIndex = 0;
+
+      const splitNode = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const text = node.textContent;
+          const frag = document.createDocumentFragment();
+          for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            if (char.trim() === '') {
+              frag.appendChild(document.createTextNode(char));
+            } else {
+              const span = document.createElement('span');
+              span.textContent = char;
+              span.className = 'wavy-char';
+              // Negative delay creates the phase shift without waiting for the animation to start
+              span.style.animationDelay = `${charIndex * -0.15}s`;
+              frag.appendChild(span);
+              charIndex++;
+            }
+          }
+          node.replaceWith(frag);
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          Array.from(node.childNodes).forEach(child => splitNode(child));
+        }
+      };
+
+      Array.from(this.element.childNodes).forEach(child => splitNode(child));
+
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.element.classList.add('is-wavy');
+          } else {
+            this.element.classList.remove('is-wavy');
+          }
+        });
+      });
+      this.observer.observe(this.element);
+    }
+  }
+
+  document.querySelectorAll('.team-hero-title').forEach(el => {
+    new WavyText(el, { amplitude: 0.25, duration: 2.2 });
+  });
 });
