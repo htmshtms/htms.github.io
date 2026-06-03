@@ -220,6 +220,16 @@
 .step-desc {
   font-weight: 300; font-size: 1.0156vw; color: #bebebe;
   line-height: 1.5; width: 13.2813vw;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.prod-step:hover .step-desc {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .step-action {
