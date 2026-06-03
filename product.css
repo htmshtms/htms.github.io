@@ -100,7 +100,8 @@
   font-size: 1.2500vw;
   line-height: 1.5;
   color: #000;
-  padding-top: 4.6875vw; /* Increased from 2.3438vw */
+  padding-top: 3.5vw;
+  padding-left: 2vw;
 }
 
 .prod-prob-col.right {
@@ -108,7 +109,7 @@
   font-size: 1.2500vw;
   line-height: 1.5;
   color: #000;
-  padding-top: 4.6875vw; /* Increased from 2.3438vw */
+  padding-top: 3.5vw;
 }
 
 .indent {
