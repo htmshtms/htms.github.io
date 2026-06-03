@@ -584,4 +584,33 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.member-name').forEach(el => {
     new TextFill(el, { duration: 2.4 });
   });
+
+  /*
+    Variable Font Effect
+    Pauses animation when off-screen to save performance.
+  */
+  class VariableFontEffect {
+    constructor(element) {
+      this.element = element;
+      this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (this.prefersReducedMotion) return;
+
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.element.classList.remove('is-paused');
+          } else {
+            this.element.classList.add('is-paused');
+          }
+        });
+      }, { threshold: 0 });
+      
+      this.observer.observe(this.element);
+    }
+  }
+
+  document.querySelectorAll('.js-vf').forEach(el => {
+    new VariableFontEffect(el);
+  });
 });
