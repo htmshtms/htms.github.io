@@ -4,8 +4,7 @@
 .prod-hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 1080; /* 16:9 ratio */
-  height: auto;
+  height: 70vw; /* Increased height */
   overflow: hidden;
   margin-top: -66px; /* pull under nav */
   background: #000;
