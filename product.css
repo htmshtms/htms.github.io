@@ -329,8 +329,8 @@
 .scen-main-title {
   font-family: var(--font-syne);
   font-weight: 700;
-  font-size: 3vw;
-  line-height: 1.1;
+  font-size: 1.8vw;
+  line-height: 1.2;
   color: #000;
   text-transform: uppercase;
 }
