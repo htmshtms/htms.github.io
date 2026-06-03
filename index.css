@@ -284,16 +284,38 @@ a {
   width: 100%;
 }
 
-/* Problem Section */
-.problem-section {
-  padding: clamp(100px, 15vw, 211px) clamp(20px, 5vw, 40px);
+/* Problem Section (Apple Style Scroll) */
+.apple-scroll-section {
+  position: relative;
+  height: 250vh; /* space to scroll */
+  padding: 0;
+  display: block; 
+  background-color: var(--color-black);
+  z-index: 2;
+}
+
+.apple-scroll-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(20px, 5vw, 40px);
+}
+
+.apple-scroll-content {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: clamp(20px, 4vw, 40px);
-  position: relative;
-  z-index: 2;
+  opacity: 0; /* JS will handle fade */
+  transform: scale(0.95);
+  will-change: opacity, transform;
 }
 
 .section-subtitle {

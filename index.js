@@ -442,4 +442,40 @@ document.addEventListener("DOMContentLoaded", () => {
   if (teamHeader && teamHeroBg) {
     new RippleWake(teamHeader, teamHeroBg);
   }
+
+  // Apple Style Scroll Interaction for Problem Section
+  const appleScrollSection = document.querySelector('.apple-scroll-section');
+  const appleScrollContent = document.querySelector('.apple-scroll-content');
+
+  if (appleScrollSection && appleScrollContent) {
+    window.addEventListener('scroll', () => {
+      const rect = appleScrollSection.getBoundingClientRect();
+      const scrollEnd = rect.height - window.innerHeight;
+      
+      let progress = -rect.top / scrollEnd;
+      if (progress < 0) progress = 0;
+      if (progress > 1) progress = 1;
+      
+      let opacity = 0;
+      let scale = 0.95;
+      
+      if (progress < 0.3) {
+        const p = progress / 0.3;
+        const ease = 1 - Math.pow(1 - p, 3);
+        opacity = ease;
+        scale = 0.95 + (0.05 * ease);
+      } else if (progress < 0.7) {
+        opacity = 1;
+        scale = 1;
+      } else {
+        const p = (progress - 0.7) / 0.3;
+        const ease = p * p;
+        opacity = 1 - ease;
+        scale = 1 + (0.05 * ease);
+      }
+      
+      appleScrollContent.style.opacity = opacity;
+      appleScrollContent.style.transform = `scale(${scale})`;
+    });
+  }
 });
