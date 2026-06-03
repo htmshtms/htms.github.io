@@ -1020,26 +1020,3 @@ a {
 .text-fill.is-filled {
   background-position: 0% 0;
 }
-
-/* --- Variable Font Effect --- */
-.js-vf {
-  font-family: 'Roboto Flex', sans-serif !important;
-  will-change: font-variation-settings;
-  animation: vf-breathe var(--vf-dur, 3.6s) cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
-}
-
-@keyframes vf-breathe {
-  0% { font-variation-settings: "wght" 100, "wdth" 25, "slnt" 0; }
-  100% { font-variation-settings: "wght" 900, "wdth" 150, "slnt" -10; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .js-vf {
-    animation: none !important;
-    font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
-  }
-}
-
-.js-vf.is-paused {
-  animation-play-state: paused !important;
-}
