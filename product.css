@@ -199,12 +199,12 @@
   transition: opacity 0.4s ease, filter 0.4s ease;
 }
 
-.prod-steps:hover .prod-step {
+.prod-steps:has(.prod-step:hover) .prod-step {
   opacity: 0.4;
   filter: brightness(0.7);
 }
 
-.prod-steps:hover .prod-step:hover {
+.prod-steps:has(.prod-step:hover) .prod-step:hover {
   opacity: 1;
   filter: brightness(1);
 }
