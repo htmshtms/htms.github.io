@@ -47,6 +47,52 @@
 .prod-hero-title.left { font-weight: 700; }
 .prod-hero-title.right { font-weight: 800; text-align: right; }
 
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  z-index: 20;
+  animation: bounceSoft 2s infinite ease-in-out;
+}
+
+.scroll-text {
+  font-family: var(--font-syne);
+  font-size: 0.8vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  margin-bottom: 0.5vw;
+}
+
+.scroll-arrow {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 0.5vw); }
+}
+
+@media (max-width: 768px) {
+  .scroll-down-indicator {
+    bottom: 8vw;
+  }
+  .scroll-text {
+    font-size: 10px;
+    margin-bottom: 2vw;
+  }
+  .scroll-arrow {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* --- Problem Section (White) --- */
 .prod-problem {
   background-color: #fff;
