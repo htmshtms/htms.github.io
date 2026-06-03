@@ -547,4 +547,41 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.team-hero-title').forEach(el => {
     new WavyText(el, { amplitude: 0.25, duration: 2.2 });
   });
+
+  /*
+    Text Fill Effect
+    Uses background-clip: text and a linear gradient to fill text with solid color on scroll.
+  */
+  class TextFill {
+    constructor(element, options = {}) {
+      this.element = element;
+      this.duration = options.duration !== undefined ? options.duration : 2.4;
+      this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      this.element.classList.add('text-fill');
+      
+      if (this.prefersReducedMotion) {
+        this.element.style.backgroundImage = 'none';
+        this.element.style.color = 'inherit';
+        return;
+      }
+
+      this.element.style.setProperty('--fill-dur', `${this.duration}s`);
+      
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.element.classList.add('is-filled');
+          } else {
+            this.element.classList.remove('is-filled');
+          }
+        });
+      });
+      this.observer.observe(this.element);
+    }
+  }
+
+  document.querySelectorAll('.member-name').forEach(el => {
+    new TextFill(el, { duration: 2.4 });
+  });
 });

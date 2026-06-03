@@ -1005,3 +1005,18 @@ a {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(calc(var(--wavy-amp, 0.3em) * -1)); }
 }
+
+/* Text Fill Effect */
+.text-fill {
+  color: transparent !important;
+  background-image: linear-gradient(to right, #000 50%, #d3d3d3 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position var(--fill-dur, 2.4s) cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: background-position;
+}
+.text-fill.is-filled {
+  background-position: 0% 0;
+}
