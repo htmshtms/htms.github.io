@@ -232,8 +232,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll('.problem-text').forEach(el => {
-    new Typewriter(el, 50, 2000);
+    new Typewriter(el, 20, 2000);
   });
+
 
   /*
     Spotlight Effect
