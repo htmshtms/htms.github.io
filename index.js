@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Page Transition Interceptor
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = link.getAttribute('href');
+      // Only intercept internal html links
+      if (target && !target.startsWith('#') && !target.startsWith('http') && target.includes('.html')) {
+        e.preventDefault();
+        window.location.href = `loading.html?target=${encodeURIComponent(target)}`;
+      }
+    });
+  });
+
   // Intersection Observer for scroll animations
   const observerOptions = {
     root: null,

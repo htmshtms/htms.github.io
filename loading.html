@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMS - Loading</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-video-wrapper">
+        <video id="loading-video" src="assets/perfume_bottle.mp4" autoplay loop muted playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const target = urlParams.get('target') || 'index.html';
+      
+      const video = document.getElementById('loading-video');
+      if (video) {
+        video.playbackRate = 2.0; // 영상 속도 2배로 올리기
+      }
+      
+      // Wait for 2.5s for the animation to play, then redirect
+      setTimeout(() => {
+        window.location.href = target;
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
