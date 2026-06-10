@@ -767,10 +767,13 @@
 
 .prod-gain-bg-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   opacity: 0.15; /* Decreased opacity to make video very faint and subtle */
   z-index: 0;
