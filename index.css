@@ -1292,10 +1292,11 @@ a {
 
 .discovery-main-title {
   font-weight: 800;
-  font-size: clamp(32px, 5vw, 64px);
+  font-size: clamp(24px, 3.5vw, 44px); /* Significantly reduced from 64px max */
   text-transform: uppercase;
   letter-spacing: -0.02em;
   margin-bottom: 2vw;
+  white-space: nowrap; /* Prevent breaking into two lines if possible */
 }
 
 .discovery-items {
@@ -1306,8 +1307,8 @@ a {
 
 .discovery-item {
   position: absolute;
-  width: 20vw;
-  min-width: 250px;
+  width: 16vw;
+  min-width: 200px;
 }
 
 .discovery-item::before {
@@ -1321,7 +1322,7 @@ a {
 
 .discovery-item-title {
   font-weight: 800;
-  font-size: clamp(16px, 1.5vw, 24px);
+  font-size: clamp(14px, 1.2vw, 18px); /* Reduced title size */
   letter-spacing: 2px;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -1329,7 +1330,7 @@ a {
 
 .discovery-item-desc {
   font-family: var(--font-pretendard), sans-serif;
-  font-size: clamp(12px, 0.9vw, 14px);
+  font-size: clamp(10px, 0.8vw, 13px); /* Reduced description text size */
   line-height: 1.5;
   color: #ccc;
   font-weight: 300;
