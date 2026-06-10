@@ -1284,9 +1284,7 @@ a {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 8vw 5vw;
+  padding: 8vw 6vw;
   height: 100%;
 }
 
@@ -1337,8 +1335,8 @@ a {
 }
 
 .discovery-item.item-1 { top: 10%; left: 0%; }
-.discovery-item.item-2 { top: 75%; left: 50%; transform: translateX(-50%); }
-.discovery-item.item-3 { top: 42%; left: 75%; }
+.discovery-item.item-2 { top: 75%; left: 35%; transform: none; }
+.discovery-item.item-3 { top: 42%; left: 60%; }
 
 @media (max-width: 768px) {
   .discovery-section {
