@@ -123,8 +123,7 @@ class RippleEffect {
   }
 }
 
-// Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
+function initRipple() {
   const navOverlay = document.querySelector('.nav-overlay');
   if (navOverlay) {
     new RippleEffect(navOverlay, {
@@ -134,4 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
       life: 2.8
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRipple);
+} else {
+  initRipple();
+}
