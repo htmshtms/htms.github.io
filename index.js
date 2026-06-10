@@ -159,23 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let rotateInterval = setInterval(rotateText, 1600); // Change word every 1.6 seconds
 
-    // Mouse Interaction
-    rotatingTextEl.addEventListener('mouseenter', () => {
-      clearInterval(rotateInterval);
-      rotatingTextEl.style.transition = 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)';
-      rotatingTextEl.style.color = '#ff4472'; // Brand pink
-      rotatingTextEl.style.textShadow = '0 0 25px rgba(255, 68, 114, 0.6)';
-      rotatingTextEl.style.transform = 'scale(1.03)';
-      rotatingTextEl.style.cursor = 'pointer';
-    });
-
-    rotatingTextEl.addEventListener('mouseleave', () => {
-      rotatingTextEl.style.transition = 'opacity 0.4s ease-in-out, filter 0.4s ease-in-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-      rotatingTextEl.style.color = '#fff';
-      rotatingTextEl.style.textShadow = 'none';
-      rotatingTextEl.style.transform = 'scale(1)';
-      rotateInterval = setInterval(rotateText, 1600);
-    });
   }
 
 
