@@ -950,6 +950,13 @@ a {
   display: inline-block;
 }
 
+.footer-brand {
+  font-family: var(--font-syne);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
 .footer.footer-light {
   background-color: var(--color-white);
   color: var(--color-black);
