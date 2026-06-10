@@ -136,20 +136,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const words = ["ONE'S OWN", "PERFUME", "FRAGRANCE"];
     let currentWordIndex = 0;
     
-    // Add transition for smooth crossfade, ensure we don't break slide-up
-    rotatingTextEl.style.transition = 'opacity 0.6s ease-in-out, transform 0.8s ease';
+    // Add transition for smooth crossfade and optical blur
+    rotatingTextEl.style.transition = 'opacity 0.4s ease-in-out, filter 0.4s ease-in-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+    rotatingTextEl.style.display = 'inline-block'; // Required for transform scale
 
-    setInterval(() => {
-      // Fade out
+    const rotateText = () => {
+      // Fade out and blur
       rotatingTextEl.style.opacity = '0';
+      rotatingTextEl.style.filter = 'blur(8px)';
+      rotatingTextEl.style.transform = 'scale(0.97)';
       
       setTimeout(() => {
-        // Change text and fade in
+        // Change text and fade back in
         currentWordIndex = (currentWordIndex + 1) % words.length;
         rotatingTextEl.textContent = words[currentWordIndex];
+        
         rotatingTextEl.style.opacity = '1';
-      }, 600); // Wait for fade out to complete
-    }, 2500); // Change word every 2.5 seconds
+        rotatingTextEl.style.filter = 'blur(0px)';
+        rotatingTextEl.style.transform = 'scale(1)';
+      }, 400); // Wait for fade out to complete
+    };
+
+    let rotateInterval = setInterval(rotateText, 1600); // Change word every 1.6 seconds
+
+    // Mouse Interaction
+    rotatingTextEl.addEventListener('mouseenter', () => {
+      clearInterval(rotateInterval);
+      rotatingTextEl.style.transition = 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)';
+      rotatingTextEl.style.color = '#ff4472'; // Brand pink
+      rotatingTextEl.style.textShadow = '0 0 25px rgba(255, 68, 114, 0.6)';
+      rotatingTextEl.style.transform = 'scale(1.03)';
+      rotatingTextEl.style.cursor = 'pointer';
+    });
+
+    rotatingTextEl.addEventListener('mouseleave', () => {
+      rotatingTextEl.style.transition = 'opacity 0.4s ease-in-out, filter 0.4s ease-in-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+      rotatingTextEl.style.color = '#fff';
+      rotatingTextEl.style.textShadow = 'none';
+      rotatingTextEl.style.transform = 'scale(1)';
+      rotateInterval = setInterval(rotateText, 1600);
+    });
   }
 
 
