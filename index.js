@@ -596,4 +596,25 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.member-name').forEach(el => {
     new TextFill(el, { duration: 2.4 });
   });
+
+  // Full-screen Overlay Menu
+  const nav = document.querySelector('.nav');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navOverlay = document.querySelector('.nav-overlay');
+  
+  if (menuToggle && navOverlay && nav) {
+    const toggleMenu = () => {
+      nav.classList.toggle('nav--open');
+      if (nav.classList.contains('nav--open')) {
+        menuToggle.textContent = 'CLOSE';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+      } else {
+        menuToggle.textContent = 'MENU';
+        document.body.style.overflow = '';
+      }
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu); // Close when clicking overlay
+  }
 });

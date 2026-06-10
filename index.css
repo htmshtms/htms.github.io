@@ -137,15 +137,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px clamp(20px, 4vw, 40px);
+  padding: 30px clamp(20px, 4vw, 40px);
   font-size: 12px;
   letter-spacing: 1.2px;
   z-index: 999;
-  background: linear-gradient(135deg, rgba(120, 125, 130, 0.2) 0%, rgba(30, 35, 40, 0.5) 50%, rgba(60, 65, 70, 0.3) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  mix-blend-mode: difference;
+  color: var(--color-white);
+}
+
+.nav--hidden {
+  transform: translateY(-100%);
+}
+
+.nav--open {
+  mix-blend-mode: normal;
 }
 
 .nav-logo {
@@ -153,12 +160,86 @@ a {
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 2px;
+  flex: 1;
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(0.85);
+  transform-origin: left center;
+}
+
+.nav--open .nav-logo {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1.6);
 }
 
 .nav-links {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: clamp(10px, 3vw, 36px);
+  flex: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.nav--open .nav-links {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.menu-toggle {
+  background: transparent;
+  color: var(--color-white);
+  border: none;
+  padding: 6px 16px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-syne);
+}
+
+.menu-toggle:hover {
+  opacity: 0.7;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 15, 20, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav--open .nav-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .hero-bg {
@@ -444,6 +525,7 @@ a {
   z-index: 5;
   padding-left: 6vw;
   width: 45%;
+  margin-top: -3vw;
   display: flex;
   flex-direction: column;
   gap: 1.5vw;
