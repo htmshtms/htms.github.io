@@ -24,7 +24,7 @@ class FlowEffect {
     this.canvas.style.height = '100%';
     this.canvas.style.pointerEvents = 'none';
     this.canvas.style.zIndex = '0'; 
-    this.canvas.style.opacity = '0.5'; // Blend with the dark overlay
+    this.canvas.style.opacity = '0.15'; // Very faint overlay
     
     this.container.insertBefore(this.canvas, this.container.firstChild);
     

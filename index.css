@@ -226,7 +226,7 @@ a {
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(10, 15, 20, 0.5);
+  background-color: rgba(10, 15, 20, 0.15);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
