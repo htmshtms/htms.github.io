@@ -950,6 +950,19 @@ a {
   display: inline-block;
 }
 
+.footer.footer-light {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.footer.footer-light a {
+  color: var(--color-black);
+}
+
+.footer.footer-light .footer-logo {
+  background-color: var(--color-black);
+}
+
 .footer-right {
   display: flex;
   gap: clamp(10px, 2vw, 16px);
