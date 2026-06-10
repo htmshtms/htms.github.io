@@ -1336,9 +1336,9 @@ a {
   font-weight: 300;
 }
 
-.discovery-item.item-1 { top: 5%; left: 0%; }
-.discovery-item.item-2 { top: 70%; left: 25%; }
-.discovery-item.item-3 { top: 35%; left: 60%; }
+.discovery-item.item-1 { top: 10%; left: 0%; }
+.discovery-item.item-2 { top: 75%; left: 50%; transform: translateX(-50%); }
+.discovery-item.item-3 { top: 42%; left: 75%; }
 
 @media (max-width: 768px) {
   .discovery-section {
@@ -1358,6 +1358,7 @@ a {
   .discovery-item {
     position: static;
     width: 100%;
+    transform: none;
   }
 }
 
