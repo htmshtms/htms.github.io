@@ -91,7 +91,7 @@
 }
 
 .team-hero .scroll-down-indicator {
-  bottom: 10vw; /* Move discover button up on team page */
+  bottom: 25%; /* Move discover button up on team page */
 }
 
 /* Team Identification Section */
