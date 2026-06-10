@@ -90,6 +90,10 @@
   text-transform: uppercase;
 }
 
+.team-hero .scroll-down-indicator {
+  bottom: 10vw; /* Move discover button up on team page */
+}
+
 /* Team Identification Section */
 .team-id-section {
   position: relative;
