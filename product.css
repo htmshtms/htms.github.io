@@ -797,25 +797,24 @@
   color: #767676;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 1.5vw;
+  margin-bottom: 1vw;
 }
 
 .gain-title {
   font-weight: 600;
-  font-size: 4vw;
-  line-height: 1.1;
+  font-size: 2.5vw;
+  line-height: 1.2;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 4vw;
+  margin-bottom: 3vw;
 }
 
 .gain-desc {
   font-family: var(--font-pretendard), sans-serif;
   font-size: 1.1vw;
-  line-height: 1.7;
-  color: #e0e0e0;
+  line-height: 1.6;
+  color: #ccc;
   font-weight: 300;
-  margin-left: 12vw;
   text-indent: 6vw;
 }
 

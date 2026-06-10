@@ -1378,20 +1378,29 @@ a {
   padding-top: 19.4531vw;
 }
 
-.prod-id-content > .prod-label,
+.prod-id-content > .prod-label {
+  display: block;
+  margin-left: 6.0938vw;
+  margin-bottom: 1.5vw;
+}
+
 .prod-id-content > .prod-title {
   margin-left: 6.0938vw;
+  font-size: 4vw;
+  line-height: 1.1;
 }
 
 .prod-intro-text {
   position: absolute;
-  top: 32.7344vw;
-  left: 6.0938vw;
-  width: 28.2031vw;
-  font-size: 1.2500vw;
-  line-height: 1.5;
-  color: #fff;
-  white-space: pre-wrap;
+  top: 39vw;
+  left: 18.0938vw;
+  width: auto;
+  font-size: 1.1vw;
+  line-height: 1.7;
+  color: #e0e0e0;
+  font-weight: 300;
+  text-indent: 6vw;
+  white-space: normal;
 }
 
 .prod-steps {
