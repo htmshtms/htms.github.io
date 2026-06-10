@@ -1388,18 +1388,19 @@ a {
   margin-left: 6.0938vw;
   font-size: 4vw;
   line-height: 1.1;
+  margin-bottom: 4vw;
 }
 
 .prod-intro-text {
   position: absolute;
   top: 39vw;
-  left: 18.0938vw;
+  left: 6.0938vw;
   width: auto;
   font-size: 1.1vw;
   line-height: 1.7;
   color: #e0e0e0;
   font-weight: 300;
-  text-indent: 6vw;
+  text-indent: 0;
   white-space: normal;
 }
 
@@ -1741,9 +1742,13 @@ a {
 }
 
 .back-to-top.show {
-  opacity: 1;
+  opacity: 0.4;
   visibility: visible;
   transform: translateY(0);
+}
+
+.back-to-top.show:hover {
+  opacity: 1;
 }
 
 .back-to-top:hover {
