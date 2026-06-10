@@ -61,30 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.body.appendChild(this.canvas);
       this.ctx = this.canvas.getContext('2d');
-    }
-  }
 
-  // Rotating Text Effect for Product Hero
-  const rotatingTextEl = document.querySelector('.prod-hero-title.left');
-  if (rotatingTextEl) {
-    const words = ["ONE'S OWN", "PERFUME", "FRAGRANCE"];
-    let currentWordIndex = 0;
-    
-    // Add transition for smooth crossfade, ensure we don't break slide-up
-    rotatingTextEl.style.transition = 'opacity 0.6s ease-in-out, transform 0.8s ease';
-
-    setInterval(() => {
-      // Fade out
-      rotatingTextEl.style.opacity = '0';
-      
-      setTimeout(() => {
-        // Change text and fade in
-        currentWordIndex = (currentWordIndex + 1) % words.length;
-        rotatingTextEl.textContent = words[currentWordIndex];
-        rotatingTextEl.style.opacity = '1';
-      }, 600); // Wait for fade out to complete
-    }, 2500); // Change word every 2.5 seconds
-  }
       this.points = [];
 
       this.resize();
@@ -153,6 +130,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new CanvasLineTrail();
 
+  // Rotating Text Effect for Product Hero
+  const rotatingTextEl = document.querySelector('.prod-hero-title.left');
+  if (rotatingTextEl) {
+    const words = ["ONE'S OWN", "PERFUME", "FRAGRANCE"];
+    let currentWordIndex = 0;
+    
+    // Add transition for smooth crossfade, ensure we don't break slide-up
+    rotatingTextEl.style.transition = 'opacity 0.6s ease-in-out, transform 0.8s ease';
+
+    setInterval(() => {
+      // Fade out
+      rotatingTextEl.style.opacity = '0';
+      
+      setTimeout(() => {
+        // Change text and fade in
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        rotatingTextEl.textContent = words[currentWordIndex];
+        rotatingTextEl.style.opacity = '1';
+      }, 600); // Wait for fade out to complete
+    }, 2500); // Change word every 2.5 seconds
+  }
 
 
   // Hero Dot Interaction
