@@ -761,6 +761,20 @@
   padding: 10vw 6.0938vw 20vw;
   color: #fff;
   font-family: var(--font-syne);
+  position: relative;
+  overflow: hidden;
+}
+
+.prod-gain-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; /* Adjusted opacity to make text readable */
+  z-index: 0;
+  pointer-events: none;
 }
 
 .gain-header {
@@ -768,6 +782,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 11vw;
+  position: relative;
+  z-index: 1;
 }
 
 .gain-label {
@@ -802,6 +818,9 @@
 .gain-interactive {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
   align-items: flex-start;
 }
 
@@ -959,32 +978,6 @@
   /* Removed gain-right-area */
 }
 
-/* --- 16:9 Video Section --- */
-.prod-video-section {
-  width: 100%;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0; /* Full width edge-to-edge. Add padding here if you want it inset */
-}
-
-.prod-video-container {
-  width: 100%;
-  max-width: 100vw;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  overflow: hidden;
-}
-
-.prod-video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* --- Detail Model Cut Section --- */
 .prod-detail {
