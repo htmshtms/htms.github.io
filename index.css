@@ -294,6 +294,29 @@ a {
   margin-bottom: clamp(220px, 42vh, 450px); /* Increased to move title up */
   display: flex;
   align-items: center;
+  
+  /* Glass Outline & Liquid Fill Effect */
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(
+    to top,
+    var(--color-pink) 0%,
+    var(--color-pink) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  background-position: 0% 0%; /* Start at transparent half */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.6s cubic-bezier(0.25, 1, 0.5, 1), -webkit-text-stroke 0.6s ease;
+  cursor: default;
+}
+
+.hero-title:hover {
+  background-position: 0% 100%; /* Move up to the pink half */
+  -webkit-text-stroke: 1.5px transparent;
 }
 
 /*
