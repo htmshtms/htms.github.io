@@ -434,7 +434,7 @@ a {
   align-items: center;
   gap: clamp(20px, 4vw, 40px);
   /* Use margin instead of transform because slide-up overrides transform */
-  margin-top: -60px;
+  margin-top: -200px; /* Moved higher up */
 }
 
 .section-subtitle {
