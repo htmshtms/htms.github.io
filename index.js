@@ -617,4 +617,39 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener('click', toggleMenu);
     navOverlay.addEventListener('click', toggleMenu); // Close when clicking overlay
   }
+
+  // Gain Interactive Tabs (Scroll based)
+  const gainRows = document.querySelectorAll('.gain-row');
+  if (gainRows.length > 0) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          let closestRow = null;
+          let minDistance = Infinity;
+          const windowCenter = window.innerHeight / 2;
+
+          gainRows.forEach(row => {
+            const rect = row.getBoundingClientRect();
+            const rowCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(windowCenter - rowCenter);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestRow = row;
+            }
+          });
+
+          if (closestRow) {
+            gainRows.forEach(r => r.classList.remove('active'));
+            closestRow.classList.add('active');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    // Trigger once on load
+    window.dispatchEvent(new Event('scroll'));
+  }
 });

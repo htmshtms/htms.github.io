@@ -288,10 +288,10 @@ a {
 .hero-title {
   font-family: var(--font-syne);
   font-weight: 800;
-  font-size: clamp(60px, 11vw, 220px);
+  font-size: clamp(50px, 9vw, 180px);
   letter-spacing: -3.27px;
   line-height: 1;
-  margin-bottom: clamp(180px, 35vh, 400px);
+  margin-bottom: clamp(220px, 42vh, 450px); /* Increased to move title up */
   display: flex;
   align-items: center;
 }
@@ -410,38 +410,31 @@ a {
   width: 100%;
 }
 
-/* Problem Section (Apple Style Scroll) */
-.apple-scroll-section {
+/* Problem Section */
+.problem-section {
   position: relative;
-  height: 150vh; /* space to scroll */
-  padding: 0;
-  display: block; 
-  background-color: var(--color-black);
-  z-index: 2;
-}
-
-.apple-scroll-sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
   width: 100%;
+  max-width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding: clamp(20px, 5vw, 40px);
+  padding: 0 clamp(20px, 5vw, 40px);
+  background-color: var(--color-black);
+  z-index: 2;
+  box-sizing: border-box;
 }
 
-.apple-scroll-content {
+.problem-content {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: clamp(20px, 4vw, 40px);
-  opacity: 0; /* JS will handle fade */
-  transform: scale(0.95);
-  will-change: opacity, transform;
+  /* Use margin instead of transform because slide-up overrides transform */
+  margin-top: -60px;
 }
 
 .section-subtitle {
@@ -450,6 +443,7 @@ a {
   font-size: 11px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .problem-text {
@@ -458,9 +452,12 @@ a {
   /* Made text thinner as requested */
   font-size: clamp(10px, 2.5vw, 32px);
   line-height: 1.4;
+  height: 4.2em; /* Fixed height for 3 lines to prevent jumping */
   color: #eee;
   max-width: 100%;
   white-space: nowrap;
+  margin: 0;
+
   /* Forces exactly 3 lines regardless of width by preventing auto-wrap */
 }
 
