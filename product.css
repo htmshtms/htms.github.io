@@ -802,11 +802,11 @@
 
 .gain-title {
   font-weight: 600;
-  font-size: 4vw;
-  line-height: 1.1;
+  font-size: 2.5vw;
+  line-height: 1.2;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 4vw;
+  margin-bottom: 3vw;
 }
 
 .gain-desc {
@@ -816,7 +816,7 @@
   color: #e0e0e0;
   font-weight: 300;
   margin-left: 0;
-  text-indent: 4vw;
+  text-indent: 12vw;
 }
 
 .gain-interactive {
