@@ -158,9 +158,10 @@ class FlowEffect {
           // Contrast
           f = f * uContrast;
           
-          // Output single grayscale channel
+          // Output reddish point color (#ff4472)
           float v = mix(0.1, 0.9, f);
-          gl_FragColor = vec4(vec3(v), 1.0); 
+          vec3 pointColor = vec3(1.0, 0.267, 0.447);
+          gl_FragColor = vec4(vec3(v) * pointColor, 1.0); 
       }
     `;
     
