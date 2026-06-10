@@ -1336,7 +1336,7 @@ a {
 
 .discovery-item.item-1 { top: 10%; left: 0%; }
 .discovery-item.item-2 { top: 75%; left: 35%; transform: none; }
-.discovery-item.item-3 { top: 42%; left: 60%; }
+.discovery-item.item-3 { top: 42%; left: 80%; }
 
 @media (max-width: 768px) {
   .discovery-section {
